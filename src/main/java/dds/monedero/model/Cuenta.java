@@ -29,7 +29,7 @@ public class Cuenta {
   public void setMovimientos(List<Movimiento> movimientos) {
     this.movimientos = movimientos;
   }
-  
+
   public double getSaldo() {
     return saldo;
   }
@@ -86,5 +86,10 @@ public class Cuenta {
         .sum();
   }
 
+  public long cantidadDeDepositos(){
+    return getMovimientos().stream()
+        .filter(Movimiento::isDeposito)
+        .count();
+  }
 
 }

@@ -22,8 +22,20 @@ public class Cuenta {
     saldo = montoInicial;
   }
 
+  public List<Movimiento> getMovimientos() {
+    return movimientos;
+  }
+
   public void setMovimientos(List<Movimiento> movimientos) {
     this.movimientos = movimientos;
+  }
+  
+  public double getSaldo() {
+    return saldo;
+  }
+
+  public void setSaldo(double saldo) {
+    this.saldo = saldo;
   }
 
   public void validarQueSaldoEsPositivo(double cuanto){
@@ -74,16 +86,5 @@ public class Cuenta {
         .sum();
   }
 
-  public List<Movimiento> getMovimientos() {
-    return movimientos;
-  }
-
-  public double getSaldo() {
-    return saldo;
-  }
-
-  public void setSaldo(double saldo) {
-    this.saldo = saldo;
-  }
 
 }
